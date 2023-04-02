@@ -21,6 +21,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
+          lfs: true
           token: ${{ secrets.ACTION_TOKEN }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
