@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - development
+    - happy
 
 jobs:
   pull-request:
