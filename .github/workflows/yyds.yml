@@ -1,34 +1,16 @@
-
-
-name: Create Pull Request
+# File: .github/workflows/pull-request.yml
 
 on:
   push:
     branches:
-      - main
+    - develop
 
 jobs:
-  createPullRequest:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.ACTION_TOKEN }}    
-     
-    
-      - name: Create Pull Request
-        id: cpr
-        uses: BaharaJr/create-pr@0.0.1
-        with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          
-          branch: example-patch
-          delete-branch: true
-              
-           
-      - name: Check outputs
-        if: ${{ steps.cpr.outputs.pull-request-number }}
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+    - uses: actions/checkout@v3
+    - name: pull-request
+    uses: diillson/auto-pull-request@v1.0.1
+      with:
+        destination_branch: "main"
