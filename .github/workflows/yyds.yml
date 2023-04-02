@@ -21,6 +21,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
+          base: main
           token: ${{ secrets.ACTION_TOKEN }}
           title: My PR title
           commit-message: My commit message
