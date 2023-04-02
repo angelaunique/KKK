@@ -15,11 +15,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.ACTION_TOKEN }}    
-      - name: Create branch
-         
-        run: |
-          git checkout -b create-pull-request/patch
-          git push --set-upstream origin create-pull-request/patch
+     
     
       - name: Get Branch
         run: |
