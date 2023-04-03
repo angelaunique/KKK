@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - main
+    - development
 
 jobs:
   pull-request:
@@ -11,4 +11,4 @@ jobs:
     - name: pull-request
       uses: diillson/auto-pull-request@v1.0.1
       with:
-        destination_branch: "development"
+        destination_branch: "main"
