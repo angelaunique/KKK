@@ -11,4 +11,4 @@ jobs:
     - name: pull-request
       uses: diillson/auto-pull-request@v1.0.1
       with:
-        destination_branch: "main"
+        destination_branch: "development"
