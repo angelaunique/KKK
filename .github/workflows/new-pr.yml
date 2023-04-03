@@ -1,7 +1,9 @@
+# yml
+
 on:
   push:
     branches:
-    - main
+    - develop
 
 jobs:
   pull-request:
